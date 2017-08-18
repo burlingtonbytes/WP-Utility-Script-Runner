@@ -1,0 +1,176 @@
+.wp-utility .response {
+	position: relative;
+	height: 60px;
+	overflow-y: auto;
+	background-color: #fff;
+	padding: 0 10px;
+	font-family: monospace;
+	margin-bottom: 10px;
+	resize: vertical;
+}
+.wp-utility .response > .wp-util-row {
+	position: relative;
+	padding-left: 12em;
+	margin: 0;
+}
+.wp-utility .response > .wp-util-row > .wp-util-time {
+	position: absolute;
+	left: 0;
+	font-weight: bold;
+}
+.wp-utility .wp-util-message {
+	white-space: pre;
+}
+.wp-utility {
+	display: block;
+	border: 1px solid #ccc;
+	max-width: 600px;
+	margin-bottom: 10px;
+}
+.wp-utility > header {
+	position: relative;
+	display: block;
+	padding: 10px;
+	margin: 0;
+	padding-right: 40px;
+	background-color: #333333;
+	color: #fff;
+	text-decoration: none;
+	font-weight: normal;
+	cursor: pointer;
+}
+.wp-utilities-all .wp-utility > header,
+.wp-utilities-cron .wp-utility > header {
+	padding-right: 10px;
+	padding-left : 45px;
+}
+.wp-utilities-cron .wp-utility > header:before {
+	position: absolute;
+	content: " ";
+	display: block;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	width: 35px;
+	border-right: 1px solid #777;
+}
+.wp-utilities-cron .wp-utility > header:before {
+	background-color: #333333;
+}
+.wp-utilities-cron .wp-utility.active-once > header:before,
+.wp-utilities-cron .wp-utility.active-hourly > header:before,
+.wp-utilities-cron .wp-utility.active-twicedaily > header:before,
+.wp-utilities-cron .wp-utility.active-daily > header:before {
+	background-color: #0074a2;
+}
+
+.wp-utilities-cron .wp-utility > header span.cron-icon {
+	position: absolute;
+	display: inline-block;
+	left: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	margin: 0;
+}
+.wp-utilities-cron .wp-utility > header span.cron-icon {
+	left: 7px;
+}
+.wp-utilities-cron .wp-utility > header span.cron-icon {
+	color: #fff;
+}
+.wp-utilities-cron .wp-utility.inactive > header span.cron-icon {
+	color: #777;
+}
+.wp-utility > header h3 {
+	color: #fff;
+	padding: 0 0 2px;
+	margin: 0;
+}
+.wp-utility > header p {
+	margin: 0;
+	font-style: italic;
+}
+.wp-utility > header:after {
+	position: absolute;
+	right: 20px;
+	top: 30%;
+	border: solid transparent;
+	content: " ";
+	height: 5px;
+	width: 5px;
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: #fff;
+	border-right-color: #fff;
+	border-width: 3px;
+	transform: rotate(135deg);
+}
+.wp-utilities-all .wp-utility > header:after {
+	display: none;
+}
+.wp-utility > header.ui-accordion-header-active {
+	background-color: #0074a2;
+}
+.wp-utility > header.ui-accordion-header-active:after {
+	top: 45%;
+	transform: rotate(315deg);
+}
+.wp-utility > div {
+	padding: 10px;
+}
+.wp-utility .wp-utility-input-form form label,
+.wp-utility .wp-utility-input-form form input,
+.wp-utility .wp-utility-input-form form select,
+.wp-utility .wp-utility-input-form form textarea,
+.wp-utility .wp-utility-input-form button {
+	display: block;
+	width: 100%;
+}
+.wp-utility .wp-utility-input-form form input[type='radio'],
+.wp-utility .wp-utility-input-form form input[type='checkbox'] {
+	display: inline-block;
+	width: auto;
+}
+.wp-utility .wp-utility-input-form form label {
+	margin: 10px 0;
+}
+
+.wp-utility .response {
+	margin-top: 10px;
+	display: none;
+}
+.wp-list-table.utilities tr td {
+	padding: 10px 9px;
+	-webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.1);
+	box-shadow: inset 0 -1px 0 rgba(0,0,0,.1);
+}
+.wp-list-table.utilities tr.active td {
+	background-color: #f7fcfe;
+}
+.wp-list-table.utilities tr td:first-child {
+	border-left: 4px solid transparent;
+	font-size: 14px;
+}
+.wp-list-table.utilities tr th:first-child {
+	border-left: 4px solid transparent;
+}
+.wp-list-table.utilities tr.active td:first-child {
+	border-left-color: #00a0d2;
+}
+.wp-list-table.utilities tr.active+tr.inactive td,
+.wp-list-table.utilities tr.active+tr.inactive th,
+.wp-list-table.utilities tr.active.plugin-update-tr+tr.inactive td,
+.wp-list-table.utilities tr.active.plugin-update-tr+tr.inactive th {
+	border-top: 1px solid rgba(0,0,0,.03);
+	-webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,.02), inset 0 -1px 0 #e1e1e1;
+	box-shadow: inset 0 1px 0 rgba(0,0,0,.02), inset 0 -1px 0 #e1e1e1;
+}
+.wp-list-table.utilities tr td .version-author-uri {
+	padding: 0 0 5px;
+	font-size: 13px;
+}
+.wp-list-table.utilities tr td strong {
+	font-weight: 400;
+}
+.wp-list-table.utilities tr.active td strong {
+	font-weight: 600;
+}
