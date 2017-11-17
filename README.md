@@ -97,12 +97,12 @@ one.
 Technically, yes, but you'll be sacrificing a lot of features. You can write your
 utility in "legacy mode", where it can be written as simply as:
 
-```
+`
 <?php
 // Utility Name: My Legacy Utility
 // Description: An example of a legacy utility
 echo "Hello World"; // your custom code goes here
-```
+`
 
 You will not get native handling for inputs, files, state, downloads, or error
 output, but it is pretty darn short.

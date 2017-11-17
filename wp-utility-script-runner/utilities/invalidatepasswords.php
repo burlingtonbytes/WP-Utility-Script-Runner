@@ -6,7 +6,7 @@
  * Author: Burlington Bytes, LLC
  * Author URI: https://www.burlingtonbytes.com
  * Supports: input
- * Version: 1.0.0
+ * Version: 1.0.1
  **/
 
 add_filter('wp_util_input_html', function( $html ) {

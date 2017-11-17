@@ -2,7 +2,7 @@
 /**
  * Plugin Name: WP Utility Script Runner
  * Description: Write, manage, and run simple "Utility Scripts" (tasks that do not need to run on every page load)
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Burlington Bytes
  * Author URI: https://www.burlingtonbytes.com
  * Text Domain: wp-util
