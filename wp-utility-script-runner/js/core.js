@@ -1,4 +1,13 @@
-jQuery(document).ready(function($) {
+"use strict";
+
+jQuery(function($) {
+	// adds support for hyphens in form field names
+	$.extend(FormSerializer.patterns, {
+		validate: /^[a-z][a-z0-9_-]*(?:\[(?:\d*|[a-z0-9_-]+)\])*$/i,
+		key:      /[a-z0-9_-]+|(?=\[\])/gi,
+		named:    /^[a-z0-9_-]+$/i
+	});
+
 	$('.download-sample-util').click(function(e) {
 		e.preventDefault();
 		var payload = {
@@ -34,7 +43,7 @@ jQuery(document).ready(function($) {
 		});
 	}, 50);
 	// end nasty interface hack
-	
+
 	var $fileInputs = $(".wp-utility .wp-utility-input-form form").find("input[type='file']");
 	$fileInputs.change(function(e) {
 		var $this = $(this);

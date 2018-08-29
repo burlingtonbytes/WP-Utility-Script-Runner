@@ -99,5 +99,11 @@ While that's not exactly a question, we do take bug reports and reviews very ser
 
 == Changelog ==
 
+= 08/29/2018 - 1.1.0 =
+* Bugfix for form fields with hyphens in name improperly serializing
+
+= 11/16/2017 - 1.0.1 =
+* Bugfix for sample Comment2Post utility
+
 = 08/19/2017 - 1.0.0 =
 * Initial Release!

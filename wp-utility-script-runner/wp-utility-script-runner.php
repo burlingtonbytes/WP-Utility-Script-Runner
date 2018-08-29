@@ -2,7 +2,7 @@
 /**
  * Plugin Name: WP Utility Script Runner
  * Description: Write, manage, and run simple "Utility Scripts" (tasks that do not need to run on every page load)
- * Version: 1.0.1
+ * Version: 1.1.0
  * Author: Burlington Bytes
  * Author URI: https://www.burlingtonbytes.com
  * Text Domain: wp-util
@@ -11,6 +11,7 @@
 
 class WPUtilScriptRunner {
 	private static $_this;
+	private $version = '1.1.0';
 	private $utils;
 	private $options;
 	private $cron_fqs;
@@ -74,11 +75,11 @@ class WPUtilScriptRunner {
 	public function admin_enqueues() {
 		$screen = get_current_screen();
 		if( $screen->id == 'tools_page_wp-utility-script-runner' ) {
-			wp_enqueue_script( 'wp_util_FileSaver'      , plugins_url( 'js/FileSaver.min.js', __FILE__ ), array(), '1.0.0', true );
-			wp_enqueue_script( 'wp_util_SerializeObject', plugins_url( '/js/jQuery.serializeObject.js', __FILE__ ), array('jquery'), '1.0.0', true );
-			wp_enqueue_script( 'wp_util_core'           , plugins_url( 'js/core.js', __FILE__ ), array( 'jquery', 'jquery-ui-core', 'jquery-ui-accordion', 'jquery-ui-datepicker' ), '1.0.0', true );
+			wp_enqueue_script( 'wp_util_FileSaver'      , plugins_url( 'js/FileSaver.min.js', __FILE__ ), array(), $this->version, true );
+			wp_enqueue_script( 'wp_util_SerializeObject', plugins_url( '/js/jQuery.serializeObject.js', __FILE__ ), array('jquery'), $this->version, true );
+			wp_enqueue_script( 'wp_util_core'           , plugins_url( 'js/core.js', __FILE__ ), array( 'jquery', 'jquery-ui-core', 'jquery-ui-accordion', 'jquery-ui-datepicker' ), $this->version, true );
 			wp_enqueue_style( 'jquery-ui-css'           , plugins_url( 'css/jquery-ui-datepicker.css', __FILE__ ), false, "1.9.0", false );
-			wp_enqueue_style( 'wp_util_core'            , plugins_url( 'css/core.css', __FILE__ ), false, "1.0.0", false );
+			wp_enqueue_style( 'wp_util_core'            , plugins_url( 'css/core.css', __FILE__ ), false, $this->version, false );
 		}
 	}
 

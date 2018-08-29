@@ -134,5 +134,6 @@ function wp_utility_invalidate_passwords_send_email( $user, $subject, $body ) {
 	);
 	$subject = str_replace( array_keys( $replace ), array_values( $replace ), $subject );
 	$body    = str_replace( array_keys( $replace ), array_values( $replace ), $body );
-	wp_mail( $email, $subject, $body );
+	$headers = array('Content-Type: text/html; charset=UTF-8');
+	wp_mail( $email, $subject, $body, $headers );
 }
